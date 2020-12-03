@@ -1,3 +1,4 @@
+baseline_model.h5
 kaggle.json
 .ipynb_checkpoints/
 __pycache__
@@ -5,4 +6,3 @@ __pycache__
 cassava-leaf-disease-classification/
 cassava-leaf-disease-classification.zip
 *.pdf
-*.h5
