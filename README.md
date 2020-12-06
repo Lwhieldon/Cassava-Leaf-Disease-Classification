@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/220px-Manihot_esculenta_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-090.jpg?raw=true" width="200" height="200" />
+<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/maxresdefault.jpg?raw=true" width =500 />
 </p>
 
 # Cassava Leaf Disease Classification
