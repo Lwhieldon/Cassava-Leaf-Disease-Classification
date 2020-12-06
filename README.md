@@ -82,7 +82,9 @@ After our images are preprocessed, we then create a CNN by first applying transf
 
 We also apply callbacks to make sure our model can stop completely and/or reduce its learning speed when the model does not improve its validation loss. We also tell our model in a call to save the model when the model validation loss improves so we have the best model available for future fine tuning.
 
-After completing 10 epochs, the models finishes with a validation loss of 39.9% and a validation accuracy of 85%. I used Tensorboard to provide a visual representation on the accuracy and loss per each epoch. Below are line graphs representing the test & validation accuracy and loss at each epoch:
+After completing 10 epochs, the models finishes with an average validation loss of 38% and an average validation accuracy of 88%. It also identified early stopping on the 10th epoch so no further epochs were required. I used Tensorboard to provide a visual representation on the accuracy and loss per each epoch (you will need to open the notebook in Google Collab to view the Tensorboard as it does not render in GitHub). 
+
+Below are line graphs representing the test & validation accuracy and loss at each epoch:
 
 
 <p align="center">
