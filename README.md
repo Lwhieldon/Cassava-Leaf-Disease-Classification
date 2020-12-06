@@ -1,9 +1,11 @@
-# Cassava Leaf Disease Classification
-Using Machine Learning Algorithms to Identify the Type of Disease Present on a Cassava Plant Image
-
 <p align="center">
 <img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/220px-Manihot_esculenta_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-090.jpg?raw=true" width="200" height="200" />
 </p>
+
+# Cassava Leaf Disease Classification
+Using Machine Learning Algorithms to Identify the Type of Disease Present on a Cassava Plant Image
+
+
 
 ## Abstract
 
@@ -12,6 +14,22 @@ Cassava plants are a key food security crop grown by local farmers in Africa due
 In this project, I have ~20k images of Cassava plants that I will use to train a disease classification model using a convultional neural network with an accuracy score higher than ~61%. By applying transfer learning using EfficientNetB architecture, I yield an accuracy score of ~86% in our model to detect different types of disease or healthy plants.
 
 For future work, I would like to enhance the CNN by applying Test Time Augmentation. I would like to see how well the model performs on larger image files, increase the resolution up to 448x448x3. I would like to explore other transfer learning architectures that might further improve the baseline chosen in this project. And lastly, I would like to try to oversample classes to adjust for imbalanced data presented.
+
+
+## Overview and Background
+
+<p align="center">
+<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/cassavafarmer.jpg?raw=true" height="200" />
+</p>
+
+Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. As the second-largest provider of carbohydrates in Africa and at least 80% of household farms in Sub-Saharan Africa grow this starchy root, I (as a data scientist) have been tasked with helping to identify viral diseases on the plants as this is a major reason of poor crop yields.
+
+As it stands today, if farmers require help to detect disease within their crops, they must go through an arduous task of soliciting the help of government-funded agricultural experts, leading to delays in assessing crop damage and risk of destroying their entire crop base due to the spread of disease. As an added challenge, any image detection solution must perform well under low quality images, since African farmers may only have access to mobile-quality cameras with low-bandwidth.
+
+I am now tasked to classify each cassava image into four disease categories or a fifth category indicating a healthy leaf. With my help, farmers may be able to quickly identify diseased plants, potentially saving their crops before they inflict irreparable damage.
+
+In this project, we will train a convultional neural network that must have an accuracy score higher than ~61%. We demonstrate that by utilizing transfer learning, applying an EfficientNetB4 architecture, we yield a final validation accuracy score of ~86% in our model.
+
 ## Goals
 
 This repo is part of the work completed within UMBC's DATA602 Course: Intro to Data Analysis and Machine Learning.
@@ -25,19 +43,7 @@ In this project, I attempt to achieve the following:
 <li><b>Recommendations and Future Work:</b> Provide initial conclusions on project and recommend future work to enhance the model. </li>
 </ol>
 
-## Overview and Background
 
-Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. As the second-largest provider of carbohydrates in Africa and at least 80% of household farms in Sub-Saharan Africa grow this starchy root, I (as a data scientist) have been tasked with helping to identify viral diseases on the plants as this is a major reason of poor crop yields.
-
-As it stands today, if farmers require help to detect disease within their crops, they must go through an arduous task of soliciting the help of government-funded agricultural experts, leading to delays in assessing crop damage and risk of destroying their entire crop base due to the spread of disease. As an added challenge, any image detection solution must perform well under low quality images, since African farmers may only have access to mobile-quality cameras with low-bandwidth.
-
-I am now tasked to classify each cassava image into four disease categories or a fifth category indicating a healthy leaf. With my help, farmers may be able to quickly identify diseased plants, potentially saving their crops before they inflict irreparable damage.
-
-In this project, we will train a convultional neural network that must have an accuracy score higher than ~61%. We demonstrate that by utilizing transfer learning, applying an EfficientNetB4 architecture, we yield a final validation accuracy score of ~86% in our model.
-
-<p align="center">
-<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/cassavafarmer.jpg?raw=true" height="200" />
-</p>
 
 ## Data Details
 
@@ -107,8 +113,8 @@ This assignment contains the following areas:
 <ol>
   <li><a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/Summary%20Report.ipynb'>Summary and Report</a>: Jupyter Notebook including a detailed abstract on problems in assignment, code relevant to project, and visualizations supporting the completion of the project. </li>
   <li> <a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/code.ipynb'>Code:</a> Area to perform testing of dataset, functions, and implement models before final project output. </li>
-  <li><a href='https://raw.githubusercontent.com/Lwhieldon/Cassava-Leaf-Disease-Classification/master/train.csv'>train.csv:</a>The csv file that maps the image file to the classification type we use to train our model</li>
-  <li><a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/tree/master/train_images'>train_images samples</a> 5 image examples for each classification tag in the dataset. Since the total dataset is too large to upload to GitHub repo, provided a sample of the images as reference</li>
+  <li><a href='https://raw.githubusercontent.com/Lwhieldon/Cassava-Leaf-Disease-Classification/master/train.csv'>train.csv:</a> The csv file that maps the image file to the classification type we use to train our model</li>
+  <li><a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/tree/master/train_images'>train_images samples:</a> 5 image examples for each classification tag in the dataset. Since the total dataset is too large to upload to GitHub repo, provided a sample of the images as reference</li>
 </ol>
 
 Note also that all Jupter Notebooks were loaded into Google Collaboratory to take advantage of GPU throughput to speed the training of the CNN.
