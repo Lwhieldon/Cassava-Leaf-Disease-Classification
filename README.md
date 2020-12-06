@@ -9,9 +9,9 @@ Using Machine Learning Algorithms to Identify the Type of Disease Present on a C
 
 Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. When Cassava plants incur disease, it can devastate a local farmer's crops and income that drastically affects their source of food and quality of life. As a data scientist, I have been tasked with helping to identify 4 different types of viral diseases from healthy plants on plant images in an attempt to expedite disease identification and mitigate local African farmer's poor crop yields.
 
-In this project, I have ~20k images that I will train a disease classification model using a convultional neural network with an accuracy score higher than ~61%. By applying transfer learning using EfficientNetB architecture, I yield an accuracy score of 85% in our model to detect different types of disease or healthy plants.
+In this project, I have ~20k images of Cassava plants that I will use to train a disease classification model using a convultional neural network with an accuracy score higher than ~61%. By applying transfer learning using EfficientNetB architecture, I yield an accuracy score of ~86% in our model to detect different types of disease or healthy plants.
 
-For future work, I would like to enhance the CNN by applying Test Time Augmentation; I would also like to see how well the model performs on larger image files, increase the resolution up to 448x448x3.
+For future work, I would like to enhance the CNN by applying Test Time Augmentation. I would like to see how well the model performs on larger image files, increase the resolution up to 448x448x3. I would like to explore other transfer learning architectures that might further improve the baseline chosen in this project. And lastly, I would like to try to oversample classes to adjust for imbalanced data presented.
 ## Goals
 
 This repo is part of the work completed within UMBC's DATA602 Course: Intro to Data Analysis and Machine Learning.
@@ -19,10 +19,10 @@ This repo is part of the work completed within UMBC's DATA602 Course: Intro to D
 In this project, I attempt to achieve the following:
 <ol>
 <li><b>Exploration of Cassava Disease Images:</b> Examine the images tagged to each Cassava Leaf Disease Type </li>
-<li><b>Image Preprocessing of Cassava Leaf Images: </b>Apply image preprocessing to augment the images in our dataset, as this will help us create a solid model. Additionally, will break out dataset into training & validation groups.</li>
-<li><b>Train Convolutional Neural Network:</b> Applying transfer learning, using EfficientNetB architecture </li>
+<li><b>Image Preprocessing of Cassava Images: </b>Apply image preprocessing to augment the images in our dataset, as this will help us create a solid model. Additionally, will break out dataset into training & validation groups.</li>
+<li><b>Train Convolutional Neural Network:</b> Applying transfer learning, using EfficientNetB architecture. </li>
 <li><b>Loss & Accuracy Analysis on CNN:</b> Analysis of both training & validation loss and accuracy. </li>
-<li><b>Recommendations and Future Work:</b> Provide initial conclusions on project and recommend future work to enhance the model </li>
+<li><b>Recommendations and Future Work:</b> Provide initial conclusions on project and recommend future work to enhance the model. </li>
 </ol>
 
 ## Overview and Background
@@ -33,7 +33,7 @@ As it stands today, if farmers require help to detect disease within their crops
 
 I am now tasked to classify each cassava image into four disease categories or a fifth category indicating a healthy leaf. With my help, farmers may be able to quickly identify diseased plants, potentially saving their crops before they inflict irreparable damage.
 
-In this project, we will train a convultional neural network that must have an accuracy score higher than ~61%. We demonstrate that by utilizing transfer learning, applying an EfficientNetB architecture, we yield an accuracy score of 85% in our model.
+In this project, we will train a convultional neural network that must have an accuracy score higher than ~61%. We demonstrate that by utilizing transfer learning, applying an EfficientNetB4 architecture, we yield a final validation accuracy score of ~86% in our model.
 
 <p align="center">
 <img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/cassavafarmer.jpg?raw=true" height="200" />
@@ -45,7 +45,7 @@ In this project, we will train a convultional neural network that must have an a
 
 The dataset is part of an active competition as of December 2020; note the competition will end February 2021. The competition introduces a dataset of 21,367 labeled images collected during a regular survey in Uganda. Most images were crowdsourced from farmers taking photos of their gardens, and annotated by experts at the National Crops Resources Research Institute (NaCRRI) in collaboration with the AI lab at Makerere University, Kampala. The image format and documentation within the competition most realistically represents what farmers would need to diagnose in real life.
 
-Each Cassave leaf image is identified as:
+Each Cassava leaf image is identified as:
 <ul>
 <li>Cassava Bacterial Blight (CBB)</li>
 <li>Cassava Brown Streak Disease (CBSD)</li> 
@@ -70,11 +70,11 @@ Since the dataset is too large to import into a Github repo, we will not be uplo
 
 ## Outcomes and Conclusions of this Study
 
-We preprocessed our training images using ImageDataGenerator and performed a validation split where 20% of our images test the model; 80% of images train our model. We also augment our images by horizontal flips, vertical flips, shifts in ranges, and rotations. 
+We preprocessed our training images using ImageDataGenerator and performed a validation split where 20% of our images test the model and 80% of images train our model. We also augment our images by horizontal flips, vertical flips, shifts in ranges, and rotations. 
 
-After our images are preprocessed, we then create a CNN by first applying transfer learning, importing the EfficientNetB4 architecture, and then adding a GlobalAveragePooling2D() and Dense layers to denote the 5 image classifications. Note our batch size is 16, 10 epochs, and the target size of the images is 299x299x3. Our steps per epoch & validation are separated like our training & testing images (20-80 split) and the CNN takes approximately ~50 minutes to run.
+After our images are preprocessed, we then create a CNN by first applying transfer learning, importing the EfficientNetB4 architecture, and then adding a GlobalAveragePooling2D() and Dense layers to denote the 5 image classifications. Note our batch size is 16, we run 10 epochs, and the target size of each image passed into the CNN is 299x299x3. Our steps per epoch & validation are separated like our training & testing images (20-80 split) and the CNN takes approximately ~50 minutes to run.
 
-We also apply callbacks to make sure our model can stop and reduce learning speed when the model does not improve its validation loss. We also tell our model in a call to save the model when the model validation loss improves so we have the best model available for future fine tuning.
+We also apply callbacks to make sure our model can stop completely and/or reduce its learning speed when the model does not improve its validation loss. We also tell our model in a call to save the model when the model validation loss improves so we have the best model available for future fine tuning.
 
 After completing 10 epochs, the models finishes with a validation loss of 39.9% and a validation accuracy of 85%. I used Tensorboard to provide a visual representation on the accuracy and loss per each epoch. Below are line graphs representing the test & validation accuracy and loss at each epoch:
 
@@ -91,7 +91,14 @@ After completing 10 epochs, the models finishes with a validation loss of 39.9% 
 *Note: Train line = Orange; Validation line = Blue
 </p>
 
-So what's next in this study? I would like to explore Test Time Augmentation (TTA) to further enhance my model. TTA has been known to improve base neural networks by aggregating predictions across transformed versions of test images and it a common practice to expand on base models. I would also like to try converting the images into larger ones (e.g.,converting images to 448x448x3) and lastly, I would like to compare other architectures alongisde EfficientNetB4 to see if they have an improved baseline.
+So what's next in this study? I would like to explore the following:
+
+<ol>
+<li> <b>Test Time Augmentation (TTA)</b> to further enhance my model. TTA has been known to improve base neural networks by aggregating predictions across transformed versions of test images and it a common practice to expand on base models. </li>
+<li><b>Image Resizing</b>: I would also like to try converting the images into larger ones (e.g.,converting images to 448x448x3) to see if the larger size can help improve scores</li> 
+<li><b>Compare Other Transfer Learning</b>: I would like to compare other architectures alongisde EfficientNetB4 to see if they have an improved baseline. And lastly,</li>
+<li><b>Oversample classes</b> to adjust for Imbalanced Data: While our accuracy score for our base line CNN is a great start, I'd like to see if I can further improve scores by oversampling other classification groups to help adjust for the imbalanced of image class, CMD. </li>
+</ol>
 
 ## Table of Contents
 
@@ -102,6 +109,7 @@ This assignment contains the following areas:
   <li> <a href=>Code:</a> Area to perform testing of dataset, functions, and implement models before final project output. </li>
 </ol>
 
+Note also that all Jupter Notebooks were loaded into Google Collaboratory to take advantage of GPU throughput to speed the training of the CNN.
 <br>
 <pre>
 Contributors : <a href=https://github.com/Lwhieldon>Lee Whieldon</a>
@@ -110,7 +118,7 @@ Contributors : <a href=https://github.com/Lwhieldon>Lee Whieldon</a>
 <pre>
 Languages    : Python
 Tools/IDE    : Anaconda
-Libraries    : pandas, numpy, matplotlib, seaborn, sklearn
+Libraries    : datetime, numpy, matplotlib, seaborn, random, sklearn, tensorflow, keras, os, cv2, json, PIL
 </pre>
 
 <pre>
