@@ -56,7 +56,7 @@ Each Cassave leaf image is identified as:
 
 Below are examples of each image class as a reference:
 
-<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/sample_images.png?raw=true" width=1000 height=300 class="cassava" alt="Cassava Leave Examples">
+<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/sample_images.png?raw=true"  class="cassava" alt="Cassava Leave Examples">
 
 
 Since the dataset is too large to import into a Github repo, we will not be uploading images to this project. We will be referencing local copies of the files provided by Kaggle competition, including the following:
