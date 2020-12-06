@@ -91,6 +91,8 @@ After completing 10 epochs, the models finishes with a validation loss of 39.9% 
 *Note: Train line = Orange; Validation line = Blue
 </p>
 
+So what's next in this study? I would like to explore Test Time Augmentation (TTA) to further enhance my model. TTA has been known to improve base neural networks by aggregating predictions across transformed versions of test images and it a common practice to expand on base models. I would also like to try converting the images into larger ones (e.g.,converting images to 448x448x3) and lastly, I would like to compare other architectures alongisde EfficientNetB4 to see if they have an improved baseline.
+
 ## Table of Contents
 
 This assignment contains the following areas:
