@@ -87,13 +87,13 @@ After completing 10 epochs, the models finishes with a validation loss of 39.9% 
 
 <p align="center">
 <b>Train & Validation Loss</b>
-<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/epoch_loss.jpg?raw=true"/>
+<img src="https://raw.githubusercontent.com/Lwhieldon/Cassava-Leaf-Disease-Classification/1ca52d552bc06181de962bc70475265098e54ba3/images/epoch_loss.svg"/>
 *Note: Train line = Orange; Validation line = Blue
 </p>
 
 <p align="center">
 <b>Train & Validation Accuracy</b>
-<img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/epoch_acc.jpg?raw=true"/>
+<img src="https://raw.githubusercontent.com/Lwhieldon/Cassava-Leaf-Disease-Classification/1ca52d552bc06181de962bc70475265098e54ba3/images/epoch_acc.svg"/>
 *Note: Train line = Orange; Validation line = Blue
 </p>
 
