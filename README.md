@@ -59,7 +59,7 @@ Below are examples of each image class as a reference:
 <img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/sample_images.png?raw=true"  class="cassava" alt="Cassava Leave Examples">
 
 
-Since the dataset is too large to import into a Github repo, we will not be uploading images to this project. We will be referencing local copies of the files provided by Kaggle competition, including the following:
+Since the dataset is too large to import into a Github repo, we will not be uploading every training image to this project (although I do provide an example of the images and the train.csv file as a reference). We will be referencing local copies of the files provided by Kaggle competition, including the following:
 
 <ul>
 <li><b>test_images:</b> A single sample image used to validate the model's prediction accuracy. Since this is an open competition, Kaggle has not provided us a full test image dataset, so we will use this single image to test the accuracy of our model.</li>
@@ -105,8 +105,10 @@ So what's next in this study? I would like to explore the following:
 This assignment contains the following areas:
 
 <ol>
-  <li><a href=>Summary and Report</a>: Jupyter Notebook including a detailed abstract on problems in assignment, code relevant to project, and visualizations supporting the completion of the project. </li>
-  <li> <a href=>Code:</a> Area to perform testing of dataset, functions, and implement models before final project output. </li>
+  <li><a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/Summary%20Report.ipynb'>Summary and Report</a>: Jupyter Notebook including a detailed abstract on problems in assignment, code relevant to project, and visualizations supporting the completion of the project. </li>
+  <li> <a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/code.ipynb'>Code:</a> Area to perform testing of dataset, functions, and implement models before final project output. </li>
+  <li><a href='https://raw.githubusercontent.com/Lwhieldon/Cassava-Leaf-Disease-Classification/master/train.csv'>train.csv:</a>The csv file that maps the image file to the classification type we use to train our model</li>
+  <li><a href='https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/tree/master/train_images'>train_images samples</a> 5 image examples for each classification tag in the dataset. Since the total dataset is too large to upload to GitHub repo, provided a sample of the images as reference</li>
 </ol>
 
 Note also that all Jupter Notebooks were loaded into Google Collaboratory to take advantage of GPU throughput to speed the training of the CNN.
