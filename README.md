@@ -127,7 +127,7 @@ Contributors : <a href=https://github.com/Lwhieldon>Lee Whieldon</a>
 
 <pre>
 Languages    : Python
-Tools/IDE    : Anaconda
+Tools/IDE    : Google Colab
 Libraries    : datetime, numpy, matplotlib, seaborn, random, sklearn, tensorflow, keras, os, cv2, json, PIL
 </pre>
 
