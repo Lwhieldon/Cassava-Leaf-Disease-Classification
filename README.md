@@ -11,9 +11,9 @@ Using Machine Learning Algorithms to Identify the Type of Disease Present on a C
 
 Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. When Cassava plants incur disease, it can devastate a local farmer's crops and income that drastically affects their source of food and quality of life. As a data scientist, I have been tasked with helping to identify 4 different types of viral diseases from healthy plants on plant images in an attempt to expedite disease identification and mitigate local African farmer's poor crop yields.
 
-In this project, I have ~20k images of Cassava plants that I will use to train a disease classification model using a convultional neural network with an accuracy score higher than ~61%. By applying transfer learning using EfficientNetB architecture, I yield an accuracy score of ~86% in our model to detect different types of disease or healthy plants.
+In this project, I have ~21k images of Cassava plants that I will use to train a disease classification model using a convultional neural network (CNN) with an accuracy score higher than baseline accuracy of ~61%. By applying transfer learning using EfficientNetB architecture and callbacks for early stopping & learning rate reduction, I yield a validation accuracy of ~86% and validation loss of ~44% to detect the 5 different classes of plants.
 
-For future work, I would like to enhance the CNN by applying Test Time Augmentation. I would like to see how well the model performs on larger image files, increase the resolution up to 448x448x3. I would like to explore other transfer learning architectures that might further improve the baseline chosen in this project. And lastly, I would like to try to oversample classes to adjust for imbalanced data presented.
+For future work, I would like to enhance this CNN by applying Test Time Augmentation. I would like to see how well the model performs on larger image files, increasing the resolution up to 448x448x3. I would like to explore other transfer learning architectures that might further improve the baseline chosen in this project. And lastly, I would like to try to oversample classes to adjust for imbalanced data presented.
 
 
 ## Overview and Background
@@ -22,13 +22,13 @@ For future work, I would like to enhance the CNN by applying Test Time Augmentat
 <img src="https://github.com/Lwhieldon/Cassava-Leaf-Disease-Classification/blob/master/images/cassavafarmer.jpg?raw=true" height="200" />
 </p>
 
-Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. As the second-largest provider of carbohydrates in Africa and at least 80% of household farms in Sub-Saharan Africa grow this starchy root, I (as a data scientist) have been tasked with helping to identify viral diseases on the plants as this is a major reason of poor crop yields.
+Cassava plants are a key food security crop grown by local farmers in Africa due to the plant's ability to withstand harsh outdoor elements. As one of the biggest providers of carbohydrates in Africa after rice and maize and at least 80% of household farms in Sub-Saharan Africa grow this starchy root, I (as a data scientist) have been tasked with building a model that can identify viral diseases on the plants as this is a major reason of poor crop yields.
 
-As it stands today, if farmers require help to detect disease within their crops, they must go through an arduous task of soliciting the help of government-funded agricultural experts, leading to delays in assessing crop damage and risk of destroying their entire crop base due to the spread of disease. As an added challenge, any image detection solution must perform well under low quality images, since African farmers may only have access to mobile-quality cameras with low-bandwidth.
+As it stands today, these diseases are transmitted by the whitefly <i>Bemisia tabaci</i> and can quickly dessimate an entire crop's bounty. If farmers require help to detect disease within their crops, they must go through an arduous task of soliciting the help of government-funded agricultural experts, leading to delays in assessing crop damage and risk of destroying their entire crop base due to the spread of disease. As an added challenge, any image detection solution must perform well under low quality images, since African farmers may only have access to mobile-quality cameras with low-bandwidth.
 
-I am now tasked to classify each cassava image into four disease categories or a fifth category indicating a healthy leaf. With my help, farmers may be able to quickly identify diseased plants, potentially saving their crops before they inflict irreparable damage.
+I am tasked to classify each Cassava plant image into four disease categories or a fifth category indicating a healthy plant. With my help, farmers may be able to quickly identify diseased plants, potentially saving their crops before they inflict irreparable damage.
 
-In this project, we will train a convultional neural network that must have an accuracy score higher than ~61%. We demonstrate that by utilizing transfer learning, applying an EfficientNetB4 architecture, we yield a final validation accuracy score of ~86% in our model.
+In this project, we will train a convultional neural network (CNN) that must have an accuracy score higher than the baseline accuracy of ~61%. I demonstrate that by utilizing transfer learning, applying an EfficientNetB4 architecture and callbacks for early stopping and learning rate reduction, I yield an average validation accuracy score of ~86% & average validation loss of ~44% in our model.
 
 ## Goals
 
@@ -36,7 +36,7 @@ This repo is part of the work completed within UMBC's DATA602 Course: Intro to D
 
 In this project, I attempt to achieve the following:
 <ol>
-<li><b>Exploration of Cassava Disease Images:</b> Examine the images tagged to each Cassava Leaf Disease Type </li>
+<li><b>Exploration of Cassava Disease Images:</b> Examine the images tagged to each Cassava Leaf Disease Type. </li>
 <li><b>Image Preprocessing of Cassava Images: </b>Apply image preprocessing to augment the images in our dataset, as this will help us create a solid model. Additionally, will break out dataset into training & validation groups.</li>
 <li><b>Train Convolutional Neural Network:</b> Applying transfer learning, using EfficientNetB architecture. </li>
 <li><b>Loss & Accuracy Analysis on CNN:</b> Analysis of both training & validation loss and accuracy. </li>
