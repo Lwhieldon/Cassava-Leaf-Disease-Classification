@@ -102,7 +102,7 @@ Below are line graphs representing the test & validation accuracy and loss at ea
 So what's next in this study? I would like to explore the following:
 
 <ol>
-<li> <b>Test Time Augmentation (TTA)</b> to further enhance my model. TTA has been known to improve base neural networks by aggregating predictions across transformed versions of test images and it a common practice to expand on base models. </li>
+<li> <b>Additional Test Time Augmentation (TTA)</b> to further enhance my model. TTA has been known to improve base neural networks by aggregating predictions across transformed versions of test images and it a common practice to expand on base models. I would like to continue to expand on the test time augmentation I performed to include more scenarios. </li>
 <li><b>Image Resizing</b>: I would also like to try converting the images into larger ones (e.g.,converting images to 448x448x3) to see if the larger size can help improve scores</li> 
 <li><b>Compare Other Transfer Learning</b>: I would like to compare other architectures alongisde EfficientNetB4 to see if they have an improved baseline. And lastly,</li>
 <li><b>Oversample classes</b> to adjust for Imbalanced Data: While our accuracy score for our base line CNN is a great start, I'd like to see if I can further improve scores by oversampling other classification groups to help adjust for the imbalanced of image class, CMD. </li>
